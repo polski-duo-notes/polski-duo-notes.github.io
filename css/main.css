@@ -56,12 +56,44 @@ a, a:hover, a:visited{
 }
 
 .menu-button-burger{
-    width: 1.8em;
+    width: 1.5em;
+    background: #ffffff;
     height: 0.2em;
-    background: #ffffff
     border-radius: 0.1em;
-    box-shadow: 0 0.1em 0.3em rgba(255,101,47,.2);
     transition: all .5s ease-in-out;
+}
+
+.menu-button-burger::before,
+.menu-button-burger::after{
+    content: '';
+    position: absolute;
+    width: 1.5em;
+    background: #ffffff;
+    height: 0.2em;
+    border-radius: 0.1em;
+    transition: all .5s ease-in-out;
+}
+
+.menu-button-burger::before{
+    transform:translateY(-0.4em);
+}
+
+.menu-button-burger::after{
+    transform:translateY(0.4em);
+}
+
+/* Animation of burger menu */
+.menu-button.open .menu-button-burger {
+    transform: translateX(-0.7em);
+    background: transparent;
+}
+
+.menu-button.open .menu-button-burger::before{
+    transform: rotate(45deg) translate(0.5em, -0.5em);
+}
+
+.menu-button.open .menu-button-burger::after{
+    transform: rotate(45deg) translate(0.5em, 0.5em);
 }
 
 nav {
