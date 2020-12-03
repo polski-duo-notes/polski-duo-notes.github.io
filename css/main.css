@@ -1,3 +1,9 @@
+:root {
+    --primary-color: rgba(13,110,139,0.75);
+    --overlay-color: rgba(24,39,51,0.85);
+    --menu-speed: 0.75s;
+}
+
 html{
     height: 100%;
     box-sizing: border-box;
@@ -43,103 +49,150 @@ a, a:hover, a:visited{
     color: #8B217F;
 }
 
-.menu-button{
-    position: relative;
+.menu-wrap {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+
+.menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 3.5em;
+    height: 3.5em;
+    opacity: 0;
+}
+
+.menu-wrap .menu-button {
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 2em;
     height: 2em;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-    border: 0.1em solid #ffffff;
+    transition: all .5s ease;
+    border: 0.1em solid #000000;
 }
 
 .menu-button-burger{
+    position: relative;
+    display: flex;
     width: 1.5em;
-    background: #ffffff;
+    background: #000000;
     height: 0.2em;
     border-radius: 0.1em;
-    transition: all .5s ease-in-out;
+    transition: all .5s ease;
 }
 
 .menu-button-burger::before,
 .menu-button-burger::after{
     content: '';
     position: absolute;
-    width: 1.5em;
-    background: #ffffff;
+    z-index: 1;
+    width: 100%;
+    background: inherit;
     height: 0.2em;
     border-radius: 0.1em;
-    transition: all .5s ease-in-out;
-}
-
-.menu-button-burger::before{
-    transform:translateY(-0.4em);
+    transition: all .5s ease;
+    top:-0.4em;
 }
 
 .menu-button-burger::after{
-    transform:translateY(0.4em);
+    transform:translateY(0.8em);
 }
 
-/* Animation of burger menu */
-.menu-button.open .menu-button-burger {
-    transform: translateX(-0.7em);
-    background: transparent;
+/* Animation of burger menu CSS */
+.menu-wrap .toggler:checked + .menu-button .menu-button-burger {
+    transform: rotate(135deg);
 }
 
-.menu-button.open .menu-button-burger::before{
-    transform: rotate(45deg) translate(0.5em, -0.5em);
+/* Turn lines into X */
+.menu-wrap .toggler:checked + .menu-button .menu-button-burger::before,
+.menu-wrap .toggler:checked + .menu-button .menu-button-burger::after{
+    top:0;
+    transform: rotate(90deg);
 }
 
-.menu-button.open .menu-button-burger::after{
-    transform: rotate(45deg) translate(0.5em, 0.5em);
+/* Rotate on hover when checked*/
+.menu-wrap .toggler:checked:hover + .menu-button .menu-button-burger {
+    transform: rotate(225deg);
 }
 
-nav {
-    text-align: center;
-    background: #c1efff none repeat scroll 0 0;
+.menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 20em;
+    height: 100%;
+    transform: translateX(-20em);
+    transition-duration: var(--menu-speed);*/
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Show menu */
+.menu-wrap .toggler:checked ~ .menu {
+    transform: translateX(0);
+    transition-duration: var(--menu-speed);*/
+}
+
+.menu-wrap .toggler:checked ~ .menu .menu-inner nav{
+    opacity: 1;
+    transition-duration: var(--menu-speed);*/
+}
+
+.menu-wrap .menu .menu-inner {
+    background: var(--overlay-color);
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex: none;
+    transition: all .5s ease-in-out;
+}
+
+.menu-wrap .menu .menu-inner nav {
+    position: relative;
+    top:2em;
+    width:100%;
+    height:100%;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
     text-transform: uppercase;
     font-size: 0.9em;
     font-style: bold;
     color: #6D6D6D;
-    margin-left:-12.5%; 
-    margin-right: -12.5%;
-    margin-bottom:0em;
-    margin-top:-2em;
-    display:block;
-    width:auto;
-    float: center;
 }
 
-nav ul{
+.menu-wrap .menu .menu-inner nav ul{
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     list-style: none;
-    margin: 0em;
-    display:inline-flex;
-    margin-left:-2em;
 }
 
-nav ul li{
-    display:flex;
-    flex:1;
+.menu-wrap .menu .menu-inner nav ul li{
     height: auto;
-    padding-top:2em;
-    padding-left:1em;
-    padding-right:1em;
-    padding-bottom:2em;
-    margin-top:2em;
-    margin-bottom:0em;
-    margin-left: 0em;
-    margin-right: -0.05em;
-    border-left: 0.1em solid #ffffff;
-    border-right: 0.1em solid #ffffff;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
     text-decoration: none;
 }
 
-nav ul li:hover {
-    background: #90e2ff none repeat scroll 0 0;
+.menu-wrap .menu .menu-inner nav ul li:hover {
+    background: var(--overlay-color) none repeat scroll 0 0;
     color:#ffffff;
+}
+
+.menu-wrap .menu .menu-inner nav ul li a {
+    color:inherit;
+    transition: color 0.4s ease;
 }
 
 #language_nav {
@@ -228,47 +281,6 @@ ul li{
     text-align: center;
 }
 
-#icekler_logo_container {
-    display:block;
-    text-align:center;
-    float:center;
-    width:100%;
-    padding-top:1.5em;
-}
-
-#icekler_logo {
-    width:7em;
-    float:center;
-}
-
-#icekler{
-    font-size: 2em;
-    font-weight: normal;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    color: #000000;
-    display:inline-block;
-    width:100%;
-    text-align: center;
-}
-
-#icekler_logo_container_small {
-    display:block;
-    text-align:center;
-    margin-top:1em;
-}
-
-#icekler_logo_small {
-    height:4em;
-    display:inline;
-    vertical-align:middle;
-}
-
-#icekler_small {
-    font-weight:normal;
-    color: #000000;
-    display:inline;
-}
-
 #about_img {
     display: inline;
     width:20em;
@@ -286,262 +298,6 @@ ul li{
     margin-left:auto;
     margin-bottom:1.5em;
     margin-top:1em;
-}
-
-.bandcamp_container {
-    display:block;
-    text-align: center;
-}
-
-.bandcamp {
-    border: 0;
-    width: 350px;
-    height: 470px;
-}
-
-/* visual art links*/
-
-.visual_links{
-    display:block;
-    width:100%;
-    padding-left:0em;
-    text-align: center;
-    list-style: none;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    font-size:0.9em;
-}
-
-.visual_links li{
-    display:inline-block;
-    width: 11em;
-    padding: 1.3em 0 1.3em 0;
-    margin-bottom:0.6em;
-    margin-right:0.2em;
-    margin-left: 0.2em;
-    float:center;
-    border:0.1em solid #FFF;
-}
-
-#visual_link_ink{
-    background: #2f2f2f;
-    color: #FFFFFF;
-}
-
-#visual_link_crafting{
-    background: #408793;
-    color: #FFFFFF;
-}
-
-#visual_link_animation{
-    background: #dc9ed9;
-    color: #FFFFFF;
-}
-
-#visual_link_3Dmodel{
-    background: #a56d2e;
-    color: #FFFFFF;
-}
-
-#visual_link_digital{
-    background: #8921b7;
-    color: #FFFFFF;
-}
-
-#visual_link_oil_acrylics{
-    background: #31a763;
-    color: #FFFFFF;
-}
-
-#visual_link_design{
-    background: #993f54;
-    color: #FFFFFF;
-}
-
-.visual_links li:hover{
-    border:0.1em solid #676767;
-    font-size: 1.2em;
-    padding: 0.92em 0 0.92em 0;
-    width:9.1em;
-}
-
-/* visual art */
-
-.art-gallery-container {
-    display:flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    text-align:center;
-    height:auto;
-    width:auto;
-    float:center;
-}
-
-.art-gallery {
-    display:block;
-    margin-left:1.5em;
-}
-
-.art-div {
-    display:inline-flex;
-    flex-flow:column;
-    width:auto;
-    height:auto;
-    float:center;
-    text-align:center;
-    margin-right:1.5em;
-    margin-bottom:2em;
-    border:0.1em solid #FFF;
-}
-
-/*.art-div:hover {
-    border:0.15em solid #8c8c8c;
-}*/
-
-.art-mult-container{
-    display:inline-flex;
-    flex-flow: column;
-    float:center;
-    text-align:center;
-    margin-bottom:2em;
-    margin-left:-1.5em;
-    height:auto;
-    width:auto;
-    border:0.1em solid #FFF;
-}
-
-/*.art-mult-container:hover {
-    border:0.1em solid #8c8c8c;
-}*/
-
-.art-div-multiple{
-    display:inline;
-    flex-direction: row;
-    flex-wrap: wrap;
-    float:center;
-    width:auto;
-    margin-left:-0.5em;
-    margin-right:-0.5em;
-}
-
-.art_img_mult_square {
-    display:inline;
-    width:20em;
-    height:auto;
-    padding-bottom:1em;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-}
-
-.art_img_mult_landscape{
-    display:inline;
-    width:27em;
-    height:auto;
-    padding-bottom:1em;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-}
-
-.art_img_mult_portrait{
-    display:inline;
-    width:auto;
-    height:27em;
-    padding-bottom:1em;
-    padding-left: 2em;
-    padding-right: 2em;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-}
-
-.art_img {
-    display:block;
-    width:20em;
-}
-
-.art_img_square {
-    display:inline-block;
-    width:20em;
-    margin:0 auto;
-}
-
-.art_img_landscape {
-    display:block;
-    width:27em;
-}
-
-.art_img_portrait {
-    display:block;
-    width: auto;
-    height: 27em;
-    padding:0 2em;
-}
-
-.art_video_player_container{
-    display: block;
-    width: 100%;
-    float:center;
-    text-align: center;
-    padding:1em;
-}
-
-.art_video_player{
-    display:block;
-    float:center;
-    width:27em;
-    margin:0.5em;
-    margin-left:0.7em;
-}
-
-.art_vid {
-    display:block;
-    width:20em;
-}
-
-.art_vid_square {
-    display:block;
-    width:20em;
-}
-
-.art_vid_landscape {
-    display:block;
-    width:27em;
-}
-
-.art_vid_portrait {
-    display:block;
-    width:auto;
-    height:27em;
-}
-
-.art_desc{
-    display:block;
-    height:auto;
-    font-size:90%;
-}
-
-.art_title{
-    display:block;
-    font-weight: bold;
-    font-size:1.2em;
-    padding-bottom:0.3em;
-    padding-top:1em;
-}
-
-.art_comment{
-    display:block;
-    font-size:1em;
-    margin-top:-0.3em;
-}
-
-.art_medium{
-    display:block;
-    font-size:0.9em;
-}
-
-.art_date{
-    display:block;
-    font-size:0.7em;
 }
 
 /* poetry*/
@@ -623,45 +379,6 @@ ul li{
     height: auto;
     text-align: left;
     font-size: 0.7em;
-}
-
-.prose-div {
-    display:block;
-    width:100%;
-    height:auto;
-    float:center;
-    text-align:left;
-    font-size:90%;
-    padding-bottom: 4em;
-}
-
-.prose-title{
-    display:block;
-    text-align: left;
-    font-style:bold;
-    font-size:1.2em;
-}
-
-.prose-by{
-    display: block;
-    text-align: left;
-    font-size: 0.9em;
-}
-
-.prose-date{
-    display: block;
-    text-align: left;
-    font-size: 0.7em;
-}
-
-.prose-content{
-    display: inline-block;
-    width: 100%;
-    height: auto;
-    text-align: left;
-    font-size:0.9em;
-    font-family:'Times New Roman', 'Serif';
-    padding-top:1em;
 }
 
 /* TOC */
@@ -833,36 +550,5 @@ footer {
         max-width: 20em;
         margin-right:15%;
         margin-left:15%;
-    }
-    
-    .bandcamp {
-        border: 0;
-        width: 20em;
-    }
-    
-    .visual_links li:hover{
-        border:0.1em solid #676767;
-        font-size: 1.1em;
-        padding: 1em 0 1em 0;
-        width:10em;
-    }
-
-    .art_img_landscape {
-        display:block;
-        width:100%;
-    }
-
-    .art_vid_landscape {
-        display:block;
-        width:100%;
-    }
-
-    .art_img_mult_landscape{
-        display:block;
-        width: 100%;
-    }
-
-    .art_video_player{
-        width:100%;
     }
 }
