@@ -43,6 +43,27 @@ a, a:hover, a:visited{
     color: #8B217F;
 }
 
+.menu-button{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border: 0.1em solid #ffffff;
+}
+
+.menu-button-burger{
+    width: 1.8em;
+    height: 0.2em;
+    background: #ffffff
+    border-radius: 0.1em;
+    box-shadow: 0 0.1em 0.3em rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+}
+
 nav {
     text-align: center;
     background: #c1efff none repeat scroll 0 0;
