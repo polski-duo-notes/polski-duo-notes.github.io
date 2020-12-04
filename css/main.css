@@ -405,7 +405,7 @@ ul li{
     text-align:center;
     margin-right:1.5em;
     margin-bottom:2em;
-    border:0.1em solid #FFF;
+    /*border:0.1em solid #FFF;*/
     font-size:90%;
 }
 
