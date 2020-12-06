@@ -267,7 +267,9 @@ ul li{
 
 .header-bar #poland_flag {
     width: 2em;
-    display: inline-block;
+    position:fixed;
+    top:0.9em;
+    left:3em;
 }
 
 /*regular*/
