@@ -7,6 +7,8 @@
     --off-white-secondary: rgba(230,230,230,1);
     --primary-yellow:#ffe932;
     --secondary-mustard:#ffc432;
+    --hyperlink-red:#c50f00;
+    --hyperlink-red-visited:#980c00;
     --menu-speed: 0.75s;
 }
 
@@ -86,7 +88,7 @@ ul li{
 
 .container a {
     text-decoration: none;
-    color: #c50f00;
+    color: var(--hyperlink-red);
 }
 
 .container a:hover {
@@ -95,7 +97,7 @@ ul li{
 
 .container a:visited {
     text-decoration: none;
-    color: #980c00;
+    color: var(--hyperlink-red-visited);
 }
 
 .menu-wrap {
@@ -261,6 +263,11 @@ ul li{
     padding-left:12.5%;
     padding-right: 12.5%;
     color: var(--off-white);
+}
+
+.header-bar #poland_flag {
+    width: 2em;
+    display: inline-block;
 }
 
 /*regular*/
