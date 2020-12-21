@@ -52,6 +52,7 @@ h1 {
     width:100%;
     padding:0.2em 0.2em;
     margin:0em;
+    text-align:center;
 }
 
 h2 {
@@ -272,10 +273,41 @@ ul li{
     left:3em;
 }
 
+/*navigation-buttons*/
+
+.nav-buttons{
+    display:block;
+    width:100%;
+    padding-left:0em;
+    text-align: center;
+    list-style: none;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-size:0.9em;
+}
+
+.nav-buttons li{
+    display:inline-block;
+    background-color: var(--primary-red);
+    color:var(--off-white);
+    width: 10em;
+    height: 4.5em;
+    padding: 1.3em 0 1.3em 0;
+    margin-bottom:0.6em;
+    margin-right:0.2em;
+    margin-left: 0.2em;
+    float:center;
+    vertical-align: bottom;
+    border:0.1em solid #FFF;
+}
+
 /*regular*/
 
 .regular{
-    display:inline-block;   
+    display:inline-block;
+    width: 125%;
+    margin-left: -12.5%;
+    padding-left:12.5%;
+    padding-right: 12.5%; 
 }
 
 .regular a {
