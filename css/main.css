@@ -271,33 +271,69 @@ ul li{
     position:fixed;
     top:0.9em;
     left:3em;
+    cursor: pointer;
 }
 
 /*navigation-buttons*/
 
 .nav-buttons{
-    display:block;
-    width:100%;
-    padding-left:0em;
+    display: flex;
+    width: 60%;
     text-align: center;
-    list-style: none;
+    align-items: stretch;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     font-size:0.9em;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.nav-buttons li{
-    display:inline-block;
+.nav-buttons .nav-btn{
+    flex:1;
+    justify-content: space-between;
+    border:0.3em solid #FFF;
+    color:var(--off-white);
+}
+
+.nav-buttons .nav-btn a{
+    display: inline-block;
+    height:100%;
+    width: 100%;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
     background-color: var(--primary-red);
     color:var(--off-white);
-    width: 10em;
-    height: 4.5em;
-    padding: 1.3em 0 1.3em 0;
-    margin-bottom:0.6em;
-    margin-right:0.2em;
-    margin-left: 0.2em;
-    float:center;
-    vertical-align: bottom;
-    border:0.1em solid #FFF;
+}
+
+.nav-buttons .nav-btn a:hover{
+    text-decoration: none;
+    background-color: var(--secondary-mustard);
+    color: #FFF;
+}
+
+.nav-buttons .nav-btn a:visited{
+    color:var(--off-white);
+}
+
+.nav-buttons .nav-btn-off{
+    flex:1;
+    justify-content: space-between;
+    border:0.3em solid #FFF;
+    color:var(--off-white);
+}
+
+.nav-buttons .nav-btn-off a{
+    display: inline-block;
+    height:100%;
+    width: 100%;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    background-color: var(--hyperlink-red-visited);
+    color:var(--off-white);
+}
+
+.nav-buttons .nav-btn-off a:hover{
+    text-decoration: none;
+    color: #FFF;
 }
 
 /*regular*/
@@ -742,6 +778,12 @@ footer a:visited {
         word-wrap: break-word;
         font-size: 1em;
     }
+
+    .nav-buttons{
+        width: 100%;
+    }
+
+
     .footer-div-container{
         display:block;
         width:100%;
