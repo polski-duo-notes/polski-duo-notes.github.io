@@ -772,6 +772,40 @@ th{
     margin-bottom: 1em;
 }
 
+.vocab-table table, .vocab-table th, .vocab-table td {
+    border: 1px solid #000;
+    padding-top: 0.3em;
+    padding-left: 0.3em;
+    padding-bottom: 0.1em;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.vocab-table .th-top {
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+.vocab-table th {
+    text-align: center;
+    font-weight: normal;
+    border-bottom: 1px solid #000;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+
+.vocab-table{
+    border:none;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 /* END TABLES */
 
 .blog-date{
