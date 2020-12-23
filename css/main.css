@@ -108,6 +108,10 @@ ul li{
     color: #981aff;
 }
 
+.pink-text{
+    color: #fa19fe;
+}
+
 .blue-text{
     color: var(--duo-blue);
 }
@@ -665,6 +669,7 @@ table, th, td {
     padding-top: 0.3em;
     padding-left: 0.3em;
     padding-bottom: 0.1em;
+    text-align: center;
 }
 
 table{
@@ -675,7 +680,6 @@ table{
 }
 
 th{
-    text-align: left;
     border-bottom: 0.1em solid #000;
 }
 
@@ -725,10 +729,11 @@ th{
     padding-left: 0.3em;
     padding-bottom: 0.1em;
     padding-right: 1em;
+    text-align: left;
 }
 
 .mini-table{
-    margin-left: 1.5em;
+    /*margin-left: 1.5em;*/
     border:none;
     width: auto;
     margin-top: 1em;
