@@ -15,7 +15,8 @@
     --duo-blue:#21b0f5;
     --dark-duo-blue:#1b98d5;
     --soft-duo-blue:#7dcbf5;
-    --dark-blue:#6d9deb;
+    /*--dark-blue:#6d9deb;*/
+    --dark-blue:#0020C2;
     --soft-blue:#d9d2e9;
     --dark-violet:#c27a9f;
     --soft-violet:#ead1dc;
@@ -114,6 +115,10 @@ ul li{
 
 .blue-text{
     color: var(--duo-blue);
+}
+
+.dark-blue-text{
+    color: var(--dark-blue);
 }
 
 .red-text{
