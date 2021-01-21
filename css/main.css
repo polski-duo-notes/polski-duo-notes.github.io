@@ -777,6 +777,10 @@ table{
     margin-bottom: 1em;
 }
 
+.mini-table th {
+    padding-bottom: 0.5em;
+}
+
 .vocab-table table, .vocab-table th, .vocab-table td {
     border: 1px solid #000;
     padding-top: 0.3em;
