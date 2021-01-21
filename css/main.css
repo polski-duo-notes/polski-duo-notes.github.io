@@ -711,9 +711,9 @@ table{
     border-collapse: collapse;
 }
 
-th{
+/*th{
     border-bottom: 0.1em solid #000;
-}
+}*/
 
 .table-emphasis-duo-blue th{
     background: var(--duo-blue);
