@@ -7,6 +7,9 @@
             <meta name="description" content="Elisa's Duolingo Polski notes: I follow the lessons in Duolingo for Polish and make notes about the grammar and vocabulary that we are learning in each of them.">
             <meta name="og:title" property="og:title" content="Elisa's Duo Polski: Duolingo Polish notes">
             <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+            {% if site.google_analytics and jekyll.environment == 'production' %}
+            {% include analytics.html %}
+            {% endif %}
         </head>
         <body>
             <div class="menu-wrap">
