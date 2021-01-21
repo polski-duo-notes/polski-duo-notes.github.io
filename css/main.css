@@ -757,10 +757,10 @@ th{
 
 .mini-table table, .mini-table th, .mini-table td {
     border: none;
-    padding-top: 0.3em;
-    padding-left: 0.3em;
+    padding-top: 0.1em;
+    padding-left: 0em;
     padding-bottom: 0.1em;
-    padding-right: 1em;
+    padding-right: 0.7em;
     text-align: left;
 }
 
