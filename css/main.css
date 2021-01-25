@@ -7,6 +7,7 @@
     --off-white-secondary: rgba(230,230,230,1);
     --primary-yellow:#ffe932;
     --secondary-mustard:#ffc432;
+    --dark-mustard:#cc9715;
     --hyperlink-red:#c50f00;
     --hyperlink-red-visited:#980c00;
     --duo-green:#57cb03;
@@ -15,8 +16,8 @@
     --duo-blue:#21b0f5;
     --dark-duo-blue:#1b98d5;
     --soft-duo-blue:#7dcbf5;
-    /*--dark-blue:#6d9deb;*/
-    --dark-blue:#0020C2;
+    --dark-blue:#6d9deb;
+    /*--dark-blue:#0020C2;*/
     --soft-blue:#d9d2e9;
     --dark-violet:#c27a9f;
     --soft-violet:#ead1dc;
@@ -123,6 +124,18 @@ ul li{
 
 .red-text{
     color: var(--primary-red);
+}
+
+.green-text{
+    color: var(--duo-green);
+}
+
+.dark-green-text{
+    color: var(--dark-duo-green);
+}
+
+.mustard-text{
+    color: var(--dark-mustard);
 }
 
 .container {
