@@ -689,6 +689,27 @@ ul li{
 .emphasis-gray h4{
 }
 
+.checkpoint {
+    display:inline-block;
+    color: var(--secondary-mustard);
+    width: 125%;
+    margin-left: -12.5%;
+    padding-left:12.5%;
+    padding-right: 12.5%;
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    display:inline-block;
+    vertical-align: middle;
+    width:100%;
+    padding:0.2em 0.2em;
+    margin:0em;
+    text-align:center;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
 .columns{
     width: 100%;
     display:inline-flex;
