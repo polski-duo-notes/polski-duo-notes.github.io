@@ -86,6 +86,7 @@ h4 {
 }
 
 .section {
+    display: block;
     font-size: 0.9em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     font-weight: bold;
@@ -773,7 +774,7 @@ table{
     background: var(--emphasis-gray-bg);
 }*/
 
-.table-emphasis-gray{
+.table-emphasis-gray {
     background: var(--emphasis-gray-bg);
 }
 
