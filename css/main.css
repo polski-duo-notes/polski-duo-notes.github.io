@@ -765,11 +765,15 @@ table{
     background: var(--soft-violet);
 }
 
-.table-emphasis-gray th{
+/*.table-emphasis-gray th{
     background: var(--emphasis-gray-bg);
 }
 
 .table-emphasis-gray td{
+    background: var(--emphasis-gray-bg);
+}*/
+
+.table-emphasis-gray{
     background: var(--emphasis-gray-bg);
 }
 
