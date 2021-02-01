@@ -29,6 +29,7 @@ html{
     height: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
+    padding: env(safe-area-inset);
 }
 
 *,
@@ -879,7 +880,7 @@ table{
     margin-top:1em;
 }
 
-#plain_img {
+.plain_img {
     display: block;
     width:10em;
     float:center;
@@ -1091,7 +1092,17 @@ footer a:visited {
     }
 
     .header-bar h1{
-        font-size: 1.5em;
+        font-size: 1.25em;
+        padding-left: 3em;
+        padding-top: 0.3em;
+    }
+
+    .header-bar #poland_flag {
+        width: 1.7em;
+        position:fixed;
+        top:0.95em;
+        left:2.6em;
+        cursor: pointer;
     }
 
     .menu-wrap .menu {
@@ -1159,7 +1170,7 @@ footer a:visited {
         margin-right: 15%;
     }
     
-    #plain_img {
+    .plain_img {
         display: block;
         float:center;
         width: 70%;
