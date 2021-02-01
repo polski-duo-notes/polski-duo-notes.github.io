@@ -51,6 +51,7 @@ body {
     flex-direction: column;
     overflow-wrap: break-word;
     word-wrap: break-word;
+    overflow-x: visible;
 }
 
 a, a:hover, a:visited{
@@ -394,6 +395,7 @@ ul li{
     font-size:0.9em;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 0.5em;
 }
 
 .nav-buttons .nav-btn{
@@ -486,7 +488,7 @@ ul li{
     width: 125%;
     margin-left: -12.5%;
     padding-left:12.5%;
-    padding-right: 12.5%; 
+    padding-right: 12.5%;
 }
 
 .regular a {
@@ -693,10 +695,6 @@ ul li{
 .checkpoint {
     display:inline-block;
     color: var(--secondary-mustard);
-    width: 125%;
-    margin-left: -12.5%;
-    padding-left:12.5%;
-    padding-right: 12.5%;
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     display:inline-block;
@@ -745,11 +743,17 @@ table, th, td {
     text-align: center;
 }
 
+.table-wrap {
+    display: block;
+    overflow-x: scroll;
+}
+
 table{
     width: 100%;
     margin-top: 1em;
     margin-bottom: 1em;
     border-collapse: collapse;
+    word-wrap: break-word;
 }
 
 /*th{
@@ -1084,6 +1088,7 @@ footer a:visited {
 @media screen and (max-width: 780px) {
     html{
         overflow-x: hidden;
+        box-sizing: border-box;
     }
 
     .header-bar{
@@ -1121,26 +1126,43 @@ footer a:visited {
         overflow-wrap: break-word;
         word-wrap: break-word;
         font-size: 1em;
+        overflow-x: visible;
     }
 
     .nav-buttons{
         width: 100%;
     }
 
+    .nav-btn{
+        font-size: 75%;
+    }
+
+    .nav-btn-off{
+        font-size: 75%;
+    }
+
+    .nav-btn-extra{
+        font-size: 75%;
+    }
+
+    .checkpoint{
+        font-size: 2em;
+    }
 
     .footer-div-container{
         display:block;
         width:100%;
         margin-top: 0.2em;
+        overflow-x: hidden;
     }
 
     .footer-div {
         display:block;
-        width:125%;
-        margin-left:-12.5%;
+        width:124%;
+        margin-left:-12%;
         margin-top: 0em;
-        padding-left:12.5%;
-        padding-right:12.5%;
+        padding-left:12%;
+        padding-right:12%;
         padding-top: 0em;
         padding-bottom: 0em;
         margin-bottom: 0em;
@@ -1177,4 +1199,26 @@ footer a:visited {
         max-width: 20em;
         margin-right:15%;
         margin-left:15%;
+    }
+
+    /* poetry*/
+
+    .poetry-gallery-container {
+        max-width:105%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .poetry-gallery {
+        display:block;
+        width:105%;
+        margin-left:0;
+    }
+
+    .poem-div {
+        display:block;
+        font-size:90%;
+        overflow-x: scroll;
+    }
+
 }
