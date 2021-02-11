@@ -45,7 +45,7 @@ body {
     margin: 0em auto 0em auto;
     padding-top: 0em;
     width: 80%;
-    background: #ffffff none repeat scroll 0 0;
+    background: var(--off-white) none repeat scroll 0 0;
     font-size: 1.3em;
     display:flex;
     flex-direction: column;
@@ -401,7 +401,7 @@ ul li{
 .nav-buttons .nav-btn{
     flex:1;
     justify-content: space-between;
-    border:0.3em solid #FFF;
+    border:0.3em solid transparent;
 }
 
 .nav-buttons .nav-btn a{
@@ -428,7 +428,7 @@ ul li{
 .nav-buttons .nav-btn-off{
     flex:1;
     justify-content: space-between;
-    border:0.3em solid #FFF;
+    border:0.3em solid transparent;
 }
 
 .nav-buttons .nav-btn-off a{
@@ -448,7 +448,7 @@ ul li{
 .nav-buttons .nav-btn-extra{
     flex:1;
     justify-content: space-between;
-    border:0.3em solid #FFF;
+    border:0.3em solid transparent;
 }
 
 .nav-buttons .nav-btn-extra a{
@@ -515,7 +515,7 @@ ul li{
 
 .regular-off-white{
     display:inline-block;
-    background: var(--off-white);
+    background: var(--off-white-secondary);
     color: #000;
     width: 125%;
     margin-left: -12.5%;
@@ -1027,7 +1027,7 @@ footer a:visited {
 
 #footer_band{
     display:block;
-    background: var(--off-white);
+    background: var(--off-white-secondary);
     margin-top:0em;
     margin-left:-12.5%; 
     margin-right: -12.5%;
