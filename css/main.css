@@ -811,6 +811,7 @@ table{
     padding-bottom: 0.1em;
     padding-right: 0.7em;
     text-align: left;
+    vertical-align: top;
 }
 
 .mini-table{
