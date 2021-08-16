@@ -3,3 +3,7 @@ name: Elisa's Duo Polski
 
 # Google Analytics
 google_analytics: G-7B0RJ4YE31
+
+url: "https://elisa-duo-polski.github.io" # the base hostname & protocol for your site
+plugins:
+  - jekyll-sitemap
