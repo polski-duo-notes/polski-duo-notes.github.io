@@ -1,9 +1,10 @@
-name: Elisa's Duo Polski
+name: Polski Duo Notes
 # markdown: kramdown
 
 # Google Analytics
-google_analytics: G-7B0RJ4YE31
+google_analytics: G-XTBEVLK1HL
 
-url: "https://elisa-duo-polski.github.io" # the base hostname & protocol for your site
+
+url: "https://polski-duo-notes.github.io" # the base hostname & protocol for your site
 plugins:
   - jekyll-sitemap
